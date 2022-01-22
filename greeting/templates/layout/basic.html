@@ -1,0 +1,41 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ua">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'greeting/style.css' %}">
+    <title>{% block title %}Головна сторінка - Greeting Website{% endblock %}</title>
+</head>
+<body>
+    <div class="header-top">
+        <div class="container-head-top">
+            <ul class="nav">
+                <li><a href="{% url 'index' %}">Головна</a></li>
+                <li><a href="{% url 'emails' %}">Вже привіталися</a></li>
+            </ul>
+            <a class="social-icons" href="#" rel="nofollow" target="_blank" title="Привітатися у Facebook">
+                <img src="{% static 'greeting/facebook_logo.png' %}" alt="facebook-logo">
+            </a>
+            <a class="social-icons" href="#" rel="nofollow" target="_blank" title="Привітатися у Instagram">
+                <img src="{% static 'greeting/inst_logo.png' %}" alt="instagram-logo" width="28px" height="28px">
+            </a>
+        </div>
+        <!--container-head-top-->
+    </div>
+    <!--header-top-->
+    <div class="header-middle">
+        <div class="container-head-mid">
+            <img class="logo-img" src="{% static 'greeting/logo.png' %}" alt="logo" width="120px" height="90px">
+            <h1>Greeting Website</h1>
+        </div>
+        <!--container-head-mid-->
+    </div>
+    <!--header-middle-->
+    <section class="container-body">
+        {% block content %}
+        {% endblock %}
+    </section>
+</body>
+</html>

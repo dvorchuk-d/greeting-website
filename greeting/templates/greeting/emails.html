@@ -1,0 +1,10 @@
+{% extends '../layout/basic.html' %}
+
+{% block content %}
+<ul class="emails">
+    {% for email in emails %}
+    <li>{{ email.email }}</li>
+    {% endfor %}
+</ul>
+<a href="#top" title="Повернутися до початку сторінки" class="to-top">^</a>
+{% endblock %}
