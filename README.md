@@ -28,13 +28,19 @@ npm install
 SECRET_KEY = 'YOUR_KEY'
 ```
 
-4. Create a superuser:
+4. Apply migrations:
+
+```
+python manage.py migrate
+```
+
+5. Create a superuser:
 
 ```
 python manage.py createsuperuser
 ```
 
-5. Run the server:
+6. Run the server:
 
 ```
 python manage.py runserver
